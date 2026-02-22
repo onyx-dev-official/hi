@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Éclat — Fine Fragrance</title>
+    <meta
+      name="description"
+      content="Maison Éclat crafts timeless fine fragrances with Parisian minimalism and modern depth."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <span>COMPLIMENTARY SHIPPING · TWO SIGNATURE SAMPLES WITH EVERY ORDER</span>
+    </header>
+
+    <nav class="nav shell">
+      <a class="brand" href="#top">MAISON ÉCLAT</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#craft">Craft</a></li>
+        <li><a href="#ritual">Ritual</a></li>
+        <li><a href="#finder">Finder</a></li>
+        <li><a href="#journal">Journal</a></li>
+      </ul>
+      <button class="bag-btn" id="bagBtn" aria-controls="bagPanel" aria-expanded="false">
+        Bag <span id="bagCount">0</span>
+      </button>
+    </nav>
+
+    <main id="top">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">NEW EXTRAIT DE PARFUM</p>
+          <h1 id="hero-title">NOIR VETIVER</h1>
+          <p>
+            Smoky vetiver, iris root and warm cedar wood converge into a quiet,
+            magnetic signature—crafted for evenings that linger.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#collection">DISCOVER THE COLLECTION</a>
+            <button class="btn ghost" data-add="NOIR VETIVER">ADD TO BAG</button>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="bottle">
+            <div class="cap"></div>
+            <div class="label">NOIR VETIVER</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collection" class="collection shell" aria-labelledby="collection-title">
+        <div class="section-head">
+          <h2 id="collection-title">The Collection</h2>
+          <p>Concentrated fragrances designed with architecture, not excess.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>NOIR VETIVER</h3>
+            <p>Vetiver · Iris · Cedar</p>
+            <span>Extrait de Parfum, 100 ml · €260</span>
+            <button class="inline-action" data-add="NOIR VETIVER">Add</button>
+          </article>
+          <article class="card">
+            <h3>BLANCHE FIGUE</h3>
+            <p>Green Fig · Neroli · Musk</p>
+            <span>Eau de Parfum, 100 ml · €210</span>
+            <button class="inline-action" data-add="BLANCHE FIGUE">Add</button>
+          </article>
+          <article class="card">
+            <h3>AMBRE SÉRÉNITÉ</h3>
+            <p>Amber · Saffron · Sandalwood</p>
+            <span>Extrait de Parfum, 50 ml · €180</span>
+            <button class="inline-action" data-add="AMBRE SÉRÉNITÉ">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="craft" class="split shell" aria-labelledby="craft-title">
+        <div>
+          <h2 id="craft-title">Crafted with Precision</h2>
+          <p>
+            Each perfume is blended in small batches using high-concentration oils and
+            patiently macerated to reveal depth and balance.
+          </p>
+          <ul class="metrics">
+            <li><strong>25%</strong><span>oil concentration</span></li>
+            <li><strong>8 wks</strong><span>maturation</span></li>
+            <li><strong>100%</strong><span>in-house formulation</span></li>
+          </ul>
+        </div>
+        <blockquote>
+          “Luxury is not excess. It is refinement, clarity, and intention in every detail.”
+        </blockquote>
+      </section>
+
+      <section id="ritual" class="ritual shell" aria-labelledby="ritual-title">
+        <h2 id="ritual-title">Layering Ritual</h2>
+        <div class="ritual-grid">
+          <article>
+            <h3>1. Prime</h3>
+            <p>Hydrate skin with unscented lotion to improve diffusion and longevity.</p>
+          </article>
+          <article>
+            <h3>2. Pulse</h3>
+            <p>Apply to pulse points only for controlled projection and warmer evolution.</p>
+          </article>
+          <article>
+            <h3>3. Veil</h3>
+            <p>Mist once on fabric from distance for a quiet trail throughout the day.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="finder" class="finder shell" aria-labelledby="finder-title">
+        <h2 id="finder-title">Fragrance Finder</h2>
+        <form id="finderForm" class="finder-form">
+          <label>
+            Mood
+            <select id="mood" required>
+              <option value="">Select mood</option>
+              <option value="bold">Bold Evening</option>
+              <option value="clean">Clean Daytime</option>
+              <option value="warm">Warm Intimate</option>
+            </select>
+          </label>
+          <label>
+            Preferred note
+            <select id="note" required>
+              <option value="">Select note</option>
+              <option value="wood">Woody</option>
+              <option value="citrus">Citrus</option>
+              <option value="amber">Amber</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">GET RECOMMENDATION</button>
+        </form>
+        <p id="finderResult" class="finder-result" aria-live="polite"></p>
+      </section>
+
+      <section class="testimonials shell" aria-labelledby="voices-title">
+        <h2 id="voices-title">Client Voices</h2>
+        <div class="quote-box">
+          <p id="quoteText">“Noir Vetiver feels tailored—sharp lines, soft finish, unforgettable.”</p>
+          <span id="quoteAuthor">— Sofia, Milan</span>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevQuote" aria-label="Previous quote">←</button>
+          <button id="nextQuote" aria-label="Next quote">→</button>
+        </div>
+      </section>
+
+      <section id="journal" class="journal shell" aria-labelledby="journal-title">
+        <h2 id="journal-title">Maison Journal</h2>
+        <div class="journal-item">
+          <p class="eyebrow">ESSAY</p>
+          <h3>The Art of Sillage</h3>
+          <a href="#">Read</a>
+        </div>
+        <div class="journal-item">
+          <p class="eyebrow">ATELIER</p>
+          <h3>Inside the Grasse Workshop</h3>
+          <a href="#">Read</a>
+        </div>
+      </section>
+
+      <section class="faq shell" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked</h2>
+        <details>
+          <summary>How long does the fragrance last?</summary>
+          <p>Most compositions project 6–10 hours depending on skin and climate.</p>
+        </details>
+        <details>
+          <summary>Do you offer sample sets?</summary>
+          <p>Yes, a discovery trio is included with full-size orders.</p>
+        </details>
+        <details>
+          <summary>Are formulas cruelty-free?</summary>
+          <p>All formulas are cruelty-free and developed without animal testing.</p>
+        </details>
+      </section>
+
+      <section class="newsletter shell" aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Private Newsletter</h2>
+        <p>Receive launches, editorial notes, and invitation-only events.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input id="email" type="email" placeholder="Email address" required />
+          <button class="btn" type="submit">SUBSCRIBE</button>
+        </form>
+        <p id="newsletterResult" class="newsletter-result" aria-live="polite"></p>
+      </section>
+
+      <section id="visit" class="visit shell" aria-labelledby="visit-title">
+        <h2 id="visit-title">Visit the Maison</h2>
+        <p>12 Rue du Faubourg Saint-Honoré, Paris</p>
+        <a class="btn ghost" href="#">BOOK A FRAGRANCE CONSULTATION</a>
+      </section>
+    </main>
+
+    <aside id="bagPanel" class="bag-panel" aria-hidden="true">
+      <div class="bag-head">
+        <h3>Your Bag</h3>
+        <button id="closeBag" aria-label="Close bag">×</button>
+      </div>
+      <ul id="bagItems"></ul>
+      <p id="bagEmpty">Your bag is empty.</p>
+    </aside>
+
+    <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+    <footer class="footer shell">
+      <p>© Maison Éclat 2026</p>
+      <p>Instagram · Newsletter · Concierge</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
